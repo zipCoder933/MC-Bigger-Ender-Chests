@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "bigger_ender_chests:block/redstone_ender_chest"
+    }
+  }
+}

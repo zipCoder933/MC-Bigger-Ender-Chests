@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "bigger_ender_chests:block/lapis_ender_chest"
+    }
+  }
+}

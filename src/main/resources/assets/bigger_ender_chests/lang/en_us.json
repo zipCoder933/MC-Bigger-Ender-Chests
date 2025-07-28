@@ -1,0 +1,10 @@
+{
+  "block.bigger_ender_chests.diamond_ender_chest": "Large Ender Chest",
+  "container.enderchest.diamond": "Large Ender Chest",
+
+  "block.bigger_ender_chests.emerald_ender_chest": "Resonant Ender Chest",
+  "container.enderchest.emerald": "Resonant Ender Chest",
+
+  "block.bigger_ender_chests.netherite_ender_chest": "Advanced Ender Chest",
+  "container.enderchest.netherite": "Advanced Ender Chest"
+}

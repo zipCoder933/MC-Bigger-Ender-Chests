@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "bigger_ender_chests:block/gold_ender_chest"
+    }
+  }
+}

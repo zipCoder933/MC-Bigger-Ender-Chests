@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    },
+    "O": {
+      "item": "minecraft:gold_block"
+    },
+    "e": {
+      "item": "bigger_ender_chests:emerald_ender_chest"
+    }
+  },
+  "pattern": [
+    "ISI",
+    "IeI",
+    "OOO"
+  ],
+  "result": {
+    "item": "bigger_ender_chests:netherite_ender_chest"
+  },
+  "show_notification": true
+}
