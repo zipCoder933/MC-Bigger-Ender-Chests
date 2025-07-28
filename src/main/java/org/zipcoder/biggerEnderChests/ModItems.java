@@ -12,6 +12,6 @@ public class ModItems {
 
 
     //Ender chests
-    public static Item IRON_CHEST, COPPER_CHEST, GOLD_CHEST, LAPIS_CHEST, REDSTONE_CHEST, EMERALD_CHEST,DIAMOND_CHEST,  NETHERITE_CHEST;
+    public static Item EMERALD_CHEST, DIAMOND_CHEST, NETHERITE_CHEST;
 
 }

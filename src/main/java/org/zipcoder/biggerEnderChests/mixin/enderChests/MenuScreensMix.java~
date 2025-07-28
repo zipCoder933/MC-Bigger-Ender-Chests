@@ -22,8 +22,15 @@ public abstract class MenuScreensMix {
 
     @Inject(method = "<clinit>", at = @At("TAIL"))
     private static void injectedTail(CallbackInfo ci) {
+        register(ChestMenus.IRON, CustomEndChestScreen::new);
+        register(ChestMenus.COPPER, CustomEndChestScreen::new);
+        register(ChestMenus.GOLD, CustomEndChestScreen::new);
+        register(ChestMenus.LAPIS, CustomEndChestScreen::new);
+        register(ChestMenus.REDSTONE, CustomEndChestScreen::new);
         register(ChestMenus.DIAMOND, CustomEndChestScreen::new);
         register(ChestMenus.EMERALD, CustomEndChestScreen::new);
         register(ChestMenus.NETHERITE, CustomEndChestScreen::new);
+
+
     }
 }

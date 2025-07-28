@@ -25,11 +25,6 @@ public abstract class MenuTypeMix<T extends AbstractContainerMenu> implements Fe
 
     @Inject(method = "<clinit>", at = @At("TAIL"))
     private static void injectedTail(CallbackInfo ci) {
-        ChestMenus.IRON = register(MODID + ":iron_chest", (id, inventory) -> new CustomChestMenu(ChestType.IRON, id, inventory, () -> ChestMenus.IRON));
-        ChestMenus.COPPER = register(MODID + ":copper_chest", (id, inventory) -> new CustomChestMenu(ChestType.COPPER, id, inventory, () -> ChestMenus.COPPER));
-        ChestMenus.GOLD = register(MODID + ":gold_chest", (id, inventory) -> new CustomChestMenu(ChestType.GOLD, id, inventory, () -> ChestMenus.GOLD));
-        ChestMenus.LAPIS = register(MODID + ":lapis_chest", (id, inventory) -> new CustomChestMenu(ChestType.LAPIS, id, inventory, () -> ChestMenus.LAPIS));
-        ChestMenus.REDSTONE = register(MODID + ":redstone_chest", (id, inventory) -> new CustomChestMenu(ChestType.REDSTONE, id, inventory, () -> ChestMenus.REDSTONE));
         ChestMenus.DIAMOND = register(MODID + ":diamond_chest", (id, inventory) -> new CustomChestMenu(ChestType.DIAMOND, id, inventory, () -> ChestMenus.DIAMOND));
         ChestMenus.EMERALD = register(MODID + ":emerald_chest", (id, inventory) -> new CustomChestMenu(ChestType.EMERALD, id, inventory, () -> ChestMenus.EMERALD));
         ChestMenus.NETHERITE = register(MODID + ":netherite_chest", (id, inventory) -> new CustomChestMenu(ChestType.NETHERITE, id, inventory, () -> ChestMenus.NETHERITE));

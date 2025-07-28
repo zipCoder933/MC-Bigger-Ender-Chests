@@ -29,22 +29,12 @@ public abstract class BlockEntityWithoutLevelRendererMix {
         Item item = stack.getItem();
         if (item instanceof BlockItem) {
             Block block = ((BlockItem) item).getBlock();
-            if(block==ModBlocks.COPPER_CHEST)
-                blockEntity = new EnderChestBlockEntity(BlockPos.ZERO, ModBlocks.COPPER_CHEST.defaultBlockState());
-            else if(block== ModBlocks.DIAMOND_CHEST)
+             if(block== ModBlocks.DIAMOND_CHEST)
                 blockEntity = new EnderChestBlockEntity(BlockPos.ZERO, ModBlocks.DIAMOND_CHEST.defaultBlockState());
             else if(block==ModBlocks.EMERALD_CHEST)
                 blockEntity = new EnderChestBlockEntity(BlockPos.ZERO, ModBlocks.EMERALD_CHEST.defaultBlockState());
-            else if(block==ModBlocks.GOLD_CHEST)
-                blockEntity = new EnderChestBlockEntity(BlockPos.ZERO, ModBlocks.GOLD_CHEST.defaultBlockState());
-            else if(block==ModBlocks.IRON_CHEST)
-                blockEntity = new EnderChestBlockEntity(BlockPos.ZERO, ModBlocks.IRON_CHEST.defaultBlockState());
-            else if(block==ModBlocks.LAPIS_CHEST)
-                blockEntity = new EnderChestBlockEntity(BlockPos.ZERO, ModBlocks.LAPIS_CHEST.defaultBlockState());
             else if(block==ModBlocks.NETHERITE_CHEST)
                 blockEntity = new EnderChestBlockEntity(BlockPos.ZERO, ModBlocks.NETHERITE_CHEST.defaultBlockState());
-            else if(block==ModBlocks.REDSTONE_CHEST)
-                blockEntity = new EnderChestBlockEntity(BlockPos.ZERO, ModBlocks.REDSTONE_CHEST.defaultBlockState());
         }
         return original.call(instance, blockEntity, poseStack, mu, i, i2);
     }

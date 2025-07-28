@@ -27,19 +27,6 @@ public abstract class SheetsMix {
         return new Material(CHEST_SHEET, new ResourceLocation(MODID, "entity/chest/" + string));
     }
 
-    @Unique
-    private static final Material IRON = endChestMaterial("iron");
-    @Unique
-    private static final Material COPPER = endChestMaterial("copper");
-
-    @Unique
-    private static final Material GOLD = endChestMaterial("gold");
-
-    @Unique
-    private static final Material LAPIS = endChestMaterial("lapis");
-
-    @Unique
-    private static final Material REDSTONE = endChestMaterial("redstone");
 
     @Unique
     private static final Material DIAMOND = endChestMaterial("diamond");
@@ -54,21 +41,6 @@ public abstract class SheetsMix {
     private static void injectedHead(BlockEntity blockEntity, ChestType chestType, boolean bl, CallbackInfoReturnable<Material> cir) {
         if (blockEntity.getBlockState().getBlock() instanceof CustomEnderChestBlock customEnderChestBlock) {
             switch (customEnderChestBlock.type) {
-                case IRON -> {
-                    cir.setReturnValue(IRON);
-                }
-                case COPPER -> {
-                    cir.setReturnValue(COPPER);
-                }
-                case GOLD -> {
-                    cir.setReturnValue(GOLD);
-                }
-                case LAPIS -> {
-                    cir.setReturnValue(LAPIS);
-                }
-                case REDSTONE -> {
-                    cir.setReturnValue(REDSTONE);
-                }
                 case DIAMOND -> {
                     cir.setReturnValue(DIAMOND);
                 }

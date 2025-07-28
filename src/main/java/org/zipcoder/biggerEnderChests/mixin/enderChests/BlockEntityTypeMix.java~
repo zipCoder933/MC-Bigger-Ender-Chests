@@ -19,7 +19,7 @@ public abstract class BlockEntityTypeMix<T extends BlockEntity> {
             return ArrayUtils.addAll(blocks,
                     ModBlocks.DIAMOND_CHEST,
                     ModBlocks.EMERALD_CHEST,
-                    ModBlocks.NETHERITE_CHEST
+                    ModBlocks.NETHERITE_CHEST,
             );
         }
         return blocks;

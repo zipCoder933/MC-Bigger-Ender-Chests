@@ -16,8 +16,13 @@ public abstract class EnderChestBlockEntityMix {
     private void wrapOperation(Level level, BlockPos blockPos, Block block, int i, int j, Operation<Void> original) {
 
         original.call(level, blockPos, block, i, j);
+        original.call(level, blockPos, ModBlocks.IRON_CHEST, i, j);
+        original.call(level, blockPos, ModBlocks.COPPER_CHEST, i, j);
+        original.call(level, blockPos, ModBlocks.GOLD_CHEST, i, j);
         original.call(level, blockPos, ModBlocks.DIAMOND_CHEST, i, j);
         original.call(level, blockPos, ModBlocks.EMERALD_CHEST, i, j);
         original.call(level, blockPos, ModBlocks.NETHERITE_CHEST, i, j);
+        original.call(level, blockPos, ModBlocks.LAPIS_CHEST, i, j);
+        original.call(level, blockPos, ModBlocks.REDSTONE_CHEST, i, j);
     }
 }
