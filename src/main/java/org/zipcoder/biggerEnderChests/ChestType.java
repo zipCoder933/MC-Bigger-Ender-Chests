@@ -1,4 +1,4 @@
-package org.zipcoder.biggerEnderChests.enderChests;
+package org.zipcoder.biggerEnderChests;
 
 public enum ChestType {
     DIAMOND(3),

@@ -1,4 +1,4 @@
-package org.zipcoder.biggerEnderChests.mixin.enderChests;
+package org.zipcoder.biggerEnderChests.mixin;
 
 import com.google.common.collect.Lists;
 import net.minecraft.core.NonNullList;
@@ -13,7 +13,7 @@ import org.zipcoder.biggerEnderChests.mixinInterfaces.AbstractContainerMenu_I;
 import java.util.List;
 
 @Mixin(value = AbstractContainerMenu.class)
-public abstract class AbstractContainerMenuMix implements AbstractContainerMenu_I {
+public abstract class _AbstractContainerMenuMix implements AbstractContainerMenu_I {
 
     @Shadow
     private final NonNullList<ItemStack> lastSlots = NonNullList.create();

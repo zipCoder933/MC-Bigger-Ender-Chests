@@ -1,9 +1,9 @@
-package org.zipcoder.biggerEnderChests.mixin.enderChests;
+package org.zipcoder.biggerEnderChests.mixin;
 
 import org.zipcoder.biggerEnderChests.ModBlocks;
-import org.zipcoder.biggerEnderChests.enderChests.ChestMenus;
-import org.zipcoder.biggerEnderChests.enderChests.ChestType;
-import org.zipcoder.biggerEnderChests.enderChests.CustomEnderChestBlock;
+import org.zipcoder.biggerEnderChests.ChestMenus;
+import org.zipcoder.biggerEnderChests.ChestType;
+import org.zipcoder.biggerEnderChests.CustomEnderChestBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -16,10 +16,11 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import static org.zipcoder.biggerEnderChests.BiggerEnderChests.MODID;
+import static org.zipcoder.biggerEnderChests.BiggerEnderChests.printMixin;
 
 
 @Mixin(value = Blocks.class)
-public abstract class BlocksMix {
+public abstract class _BlocksMix {
 
     @Shadow
     private static Block register(String p_50796_, Block p_50797_) {
@@ -28,6 +29,7 @@ public abstract class BlocksMix {
 
     @Inject(method = "<clinit>", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/block/DecoratedPotBlock;<init>(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V", shift = At.Shift.BY, by = 2))
     private static void injectedAfter(CallbackInfo ci) {
+        printMixin();
         ModBlocks.DIAMOND_CHEST = register(
                 MODID + ":diamond_ender_chest",
                 new CustomEnderChestBlock(

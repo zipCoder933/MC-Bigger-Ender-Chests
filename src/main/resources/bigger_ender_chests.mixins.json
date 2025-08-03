@@ -5,20 +5,19 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "bigger_ender_chests.refmap.json",
   "mixins": [
-    "enderChests.BlockEntityTypeMix",
-    "enderChests.BlocksMix",
-    "enderChests.CreativeModeTabsMix",
-    "enderChests.EnderChestBlockEntityMix",
-    "enderChests.ItemsMix",
-    "enderChests.MenuTypeMix",
-    "enderChests.PlayerEnderChestContainerMix",
-    "enderChests.ServerPlayerMix",
-    "enderChests.AbstractContainerMenuMix"
+    "BlockEntityTypeMix",
+    "_BlocksMix",
+    "_CreativeModeTabsMix",
+    "EnderChestBlockEntityMix",
+    "_ItemsMix",
+    "_MenuTypeMix",
+    "_PlayerEnderChestContainerMix",
+    "_AbstractContainerMenuMix"
   ],
   "client": [
-    "enderChests.BlockEntityWithoutLevelRendererMix",
-    "enderChests.MenuScreensMix",
-    "enderChests.SheetsMix"
+    "BlockEntityWithoutLevelRendererMix",
+    "_MenuScreensMix",
+    "SheetsMix"
   ],
   "injectors": {
     "maxShiftBy": 10,

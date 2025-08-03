@@ -25,30 +25,22 @@ public class BiggerEnderChests {
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
+    public static final void printMixin(){
+//        System.out.println("mixin "+System.currentTimeMillis());
+    }
+    public static final void printMixin(String str){
+//        System.out.println("mixin "+str+"  "+System.currentTimeMillis());
+    }
+
     public BiggerEnderChests() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         //Register the Deferred Register to the mod event bus so blocks get registered
         BLOCKS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so items get registered
         ITEMS.register(modEventBus);
-
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-
-        // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
-    }
 
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents {
-
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {
-        }
-    }
 }

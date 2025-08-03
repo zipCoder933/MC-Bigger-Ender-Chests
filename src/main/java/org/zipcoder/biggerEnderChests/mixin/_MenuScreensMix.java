@@ -1,7 +1,7 @@
-package org.zipcoder.biggerEnderChests.mixin.enderChests;
+package org.zipcoder.biggerEnderChests.mixin;
 
-import org.zipcoder.biggerEnderChests.enderChests.ChestMenus;
-import org.zipcoder.biggerEnderChests.enderChests.CustomEndChestScreen;
+import org.zipcoder.biggerEnderChests.ChestMenus;
+import org.zipcoder.biggerEnderChests.CustomEndChestScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.MenuAccess;
@@ -13,8 +13,10 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import static org.zipcoder.biggerEnderChests.BiggerEnderChests.printMixin;
+
 @Mixin(value = MenuScreens.class)
-public abstract class MenuScreensMix {
+public abstract class _MenuScreensMix {
 
     @Shadow
     private static <M extends AbstractContainerMenu, U extends Screen & MenuAccess<M>> void register(MenuType<? extends M> p_96207_, MenuScreens.ScreenConstructor<M, U> p_96208_) {
@@ -22,15 +24,9 @@ public abstract class MenuScreensMix {
 
     @Inject(method = "<clinit>", at = @At("TAIL"))
     private static void injectedTail(CallbackInfo ci) {
-        register(ChestMenus.IRON, CustomEndChestScreen::new);
-        register(ChestMenus.COPPER, CustomEndChestScreen::new);
-        register(ChestMenus.GOLD, CustomEndChestScreen::new);
-        register(ChestMenus.LAPIS, CustomEndChestScreen::new);
-        register(ChestMenus.REDSTONE, CustomEndChestScreen::new);
+        printMixin();
         register(ChestMenus.DIAMOND, CustomEndChestScreen::new);
         register(ChestMenus.EMERALD, CustomEndChestScreen::new);
         register(ChestMenus.NETHERITE, CustomEndChestScreen::new);
-
-
     }
 }

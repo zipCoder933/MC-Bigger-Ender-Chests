@@ -1,4 +1,4 @@
-package org.zipcoder.biggerEnderChests.enderChests;
+package org.zipcoder.biggerEnderChests;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;

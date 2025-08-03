@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/bigger_ender_chests.test.iml" filepath="$PROJECT_DIR$/.idea/modules/bigger_ender_chests.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/createkinetic.main.iml" filepath="$PROJECT_DIR$/.idea/modules/createkinetic.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/createkinetic.test.iml" filepath="$PROJECT_DIR$/.idea/modules/createkinetic.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.zipcoder.bigger_ender_chests.test.iml" filepath="$PROJECT_DIR$/.idea/modules/org.zipcoder.bigger_ender_chests.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.zipcoder.createkinetic.test.iml" filepath="$PROJECT_DIR$/.idea/modules/org.zipcoder.createkinetic.test.iml" />
     </modules>
   </component>

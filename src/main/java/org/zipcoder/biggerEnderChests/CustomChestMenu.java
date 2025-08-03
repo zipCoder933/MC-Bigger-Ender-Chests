@@ -1,4 +1,4 @@
-package org.zipcoder.biggerEnderChests.enderChests;
+package org.zipcoder.biggerEnderChests;
 
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;

@@ -1,4 +1,4 @@
-package org.zipcoder.biggerEnderChests.mixin.enderChests;
+package org.zipcoder.biggerEnderChests.mixin;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -11,8 +11,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.zipcoder.biggerEnderChests.ModBlocks;
 import org.zipcoder.biggerEnderChests.ModItems;
 
+import static org.zipcoder.biggerEnderChests.BiggerEnderChests.printMixin;
+
 @Mixin(value = Items.class)
-public abstract class ItemsMix {
+public abstract class _ItemsMix {
 
     @Shadow
     private static Item registerBlock(Block p_42806_) {
@@ -21,6 +23,7 @@ public abstract class ItemsMix {
 
     @Inject(method = "<clinit>", at = @At("TAIL"))
     private static void injectedTail(CallbackInfo ci) {
+        printMixin();
         ModItems.DIAMOND_CHEST = registerBlock(ModBlocks.DIAMOND_CHEST);
         ModItems.EMERALD_CHEST = registerBlock(ModBlocks.EMERALD_CHEST);
         ModItems.NETHERITE_CHEST = registerBlock(ModBlocks.NETHERITE_CHEST);
